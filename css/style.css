@@ -1,0 +1,562 @@
+/* Global */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+:root {
+    /* colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --midnight: #104f55;
+
+    --winter-neva: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /* Fonts */
+
+}
+
+a {
+    text-decoration: none;
+    color: #3f4954
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-family: Lexend Deca, cursive;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: Lexend Deca, cursive;
+}
+
+h3 {
+    font-family: Abel, cursive;
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: Livvic;
+    cursor: pointer;
+}
+
+span {
+    font-family: Abel, cursive;
+}
+
+.container {
+    margin: 0 5vw;;
+}
+
+.text-gray {
+    color: var(--text-gray)
+}
+
+p {
+    font-family: Lexend Deca;
+    color: var(--text-light)
+}
+
+hr {
+    width: 95%
+}
+
+/* Nav Start */
+.nav {
+    padding: 0 2rem;
+    height: 0;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top:0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray)
+}
+
+.collapse {
+    height: 32rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: Abel, cursive;
+    font-size: 1.1rem
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: white
+}
+
+.nav .nav-brand a {
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    font-family: Lexend Deca, cursive;
+    font-size: 1.6rem;
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.nav .social i {
+    padding: 0 0.2rem
+}
+
+.nav .social i:hover {
+    color: #a1c4cf
+}
+
+/* Nav End */
+
+/* Title Start */
+main .site-title {
+    background: url('../assets/Background-image.png');
+    background-size: cover;
+    height: 115vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background {
+    padding-top: 10rem;
+    text-align: center;
+    color: white 
+}
+
+main .site-title h3,h1 {
+    margin: 0.3rem
+}
+
+main .site-title .btn {
+    margin: 1.8rem;
+    background: var(--winter-neva);
+}
+
+main .site-title .btn:hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white
+} 
+
+/* Title End */
+
+/* Blog Start */
+main .blog {
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 65%;
+    height: 100vh;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+main .blog .blog-post {
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+main .blog-content .blog-title {
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+    padding: 0.7rem 2rem;
+    background: var(--winter-neva);
+    margin: 0.5rem
+}
+
+main .blog-content span {
+    display: block;
+}
+
+section .container .owl-nav {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2.5rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight)
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    outline: none;
+}
+/* Blog End */
+
+/* Site Content Start */
+main .site-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+main .post-content {
+    width: 100%;
+    
+    
+}
+
+main .post-content > .post-image, .post-title {
+    padding: 1rem 2rem;
+    position: relative
+}
+
+main .site-content .post-content > .post-image .post-info {
+    background: var(--winter-neva);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+    border-radius: 3rem
+}
+
+main .site-content .post-content > .post-image > div {
+    overflow: hidden;
+}
+
+main .site-content .post-content > .post-image .img {
+    display: block;
+    width: 100%;
+    transition: all 1s ease;
+}
+
+main .site-content .post-content > .post-image .img:hover {
+    transform: scale(1.3);
+}
+
+main .site-content .post-content > .post-image .post-info span {
+    margin: 0 0.5rem;
+}
+
+main .post-content .post-title a {
+    font-family: Anton;
+    font-size: 1.5rem
+}
+
+.site-content .post-content .post-title .post-btn {
+    padding: 1rem 1.5rem;
+    background: var(--winter-neva);
+}
+
+.site-content .pagination {
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a {
+    padding: 0.6rem 0.9rem;
+    border-radius: 2rem;
+    margin: 0 0.3rem;
+    font-family: Lexend Deca;
+}
+
+.site-content .pagination .page {
+    background: var(--text-gray);
+    color: white;
+}
+/* Site Content End */
+
+/* Sidebar Start */
+.site-content .sidebar .category-list {
+    font-family: Livvic;
+}
+
+.site-content .sidebar .category-list .list-items {
+    background: var(--winter-neva);
+    padding: 0.4rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content .sidebar .category-list .list-items a {
+    color: black
+}
+
+.site-content .sidebar .popular-post .post-content {
+    padding: 1rem 0 
+}
+
+.site-content .sidebar .popular-post h2 {
+    padding-top: 11rem;
+}
+
+.site-content .sidebar .popular-post .post-info {
+    padding: 0.4rem 0.1rem !important;
+    bottom: 0 !important;
+    left: 1.5rem !important;
+    border-radius: 0 !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a {
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter {
+    padding-top: 3rem
+}
+
+.site-content .sidebar .newsletter .form-element {
+    padding: 0.5rem 2rem
+}
+
+.site-content .sidebar .newsletter .input-element {
+    width: 80%;
+    height: 1.9rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    font-family: Lexend Deca;
+    border: 1px solid #ccc
+}
+
+.site-content .sidebar .newsletter .form-btn {
+    border-radius: 0;
+    padding: 0.8rem 33.8%;
+    margin: 1rem 0;
+    background: var(--winter-neva);
+
+}
+
+.site-content .sidebar .popular-tags {
+    padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag {
+    background: var(--winter-neva);
+    padding: 0.4rem 1rem;
+    border-radius: 3rem;
+    margin: 0.4rem 0.6rem
+}
+/* Sidebar End */
+
+/* Footer Start */
+footer.footer {
+    height: 100%;
+    background: #1b1b1b;
+    position: relative;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem
+}
+
+footer.footer .container h2 {
+    color: white
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    width: 77%;
+    
+    
+}
+
+footer.footer .newsletter .form-element span {
+    background: var(--winter-neva);
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img {
+    display: inline-block;
+    width: 28%;
+    height: 50%;
+    margin: 0.3rem 0.4rem
+}
+
+footer.footer .follow div i {
+    color: white;
+    padding: 0 0.4rem;
+    font-size: 1.2rem;
+}
+
+footer.footer .rights {
+    justify-content: center;
+    font-family: Josefin sans;
+}
+
+footer.footer .rights a {
+    color: white
+}
+
+footer.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span {
+    color: var(--midnight);
+    font-size: 1.2rem;
+}
+
+footer.footer .move-up span:hover {
+    color: white;
+    cursor: pointer;
+}
+/* Footer End */
+/* Media */
+
+@media only screen and (max-width: 1130px){
+    .site-content .post-content > .post-image .post-info {
+        left: 2rem !important;
+        bottom: 1rem !important;
+        border-radius: 0% !important;
+    }
+    .site-content .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+    footer.footer .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items {
+        flex-direction: column;
+    }
+    .nav .toggle-collapse {
+        display: initial;
+    }
+    main .site-content {
+        grid-template-columns: 100%;
+    }
+    main .site-content .popular-post h2 {
+        padding-top: 8rem !important;
+    }
+    footer.footer .container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer.footer .move-up {
+        top: 80%
+    }
+    .site-content .sidebar .newsletter  {
+        width: 100%;
+    }
+    .site-content .sidebar .newsletter .form-btn {
+        padding: 0.8rem 10%;
+    }
+    footer.footer .container > div {
+        padding: 2rem 0.9rem
+    }
+}
+
+@media only screen and (max-width: 520px){
+    main .blog {
+        height: 110vh;
+    }
+    .site-content .post-content > .post-image .post-info {
+        display: none;
+    }
+    footer.footer .container > div {
+        padding: 1rem 0.9rem
+    }
+    footer.footer .move-up {
+        top: 85%
+    }
+    footer.footer .move-up span {
+        font-size: 1.1rem;
+    }
+    footer .rights {
+        padding: 0 1.4rem
+    }
+    footer .rights h4 {
+        text-align: center;
+    }
+    footer .rights a {
+        margin-top: 0.6rem;
+        display: block;
+    }
+    nav .toggle-collapse {
+        width: 85% !important;
+    }
+}
